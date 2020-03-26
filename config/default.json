@@ -1,3 +1,4 @@
 {
-  "mongoURI": "mongodb+srv://pober:pober1234@devconnector-j6vab.mongodb.net/test?retryWrites=true&w=majority"
+  "mongoURI": "mongodb+srv://pober:pober1234@devconnector-j6vab.mongodb.net/test?retryWrites=true&w=majority",
+  "jwtSecret": "mysecrettoken"
 }

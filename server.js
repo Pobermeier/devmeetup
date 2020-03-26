@@ -4,6 +4,9 @@ const connectDB = require('./config/db');
 // Init Express
 const app = express();
 
+// Middleware
+app.use(express.json({ extended: false }));
+
 // Connect to database
 connectDB();
 
@@ -14,9 +17,9 @@ app.use('/api/profile', require('./routes/api/profile'));
 app.use('/api/posts', require('./routes/api/posts'));
 
 // Simple example route
-// app.get('/', (req, res) => {
-//   res.send('API Running');
-// });
+app.get('/', (req, res) => {
+  res.send('API Running');
+});
 
 const PORT = process.env.PORT || 5000;
 
