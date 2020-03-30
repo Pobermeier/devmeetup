@@ -14,12 +14,18 @@
 
   <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
+  <style>
+    .invisibleWhileLoading {
+      display: none;
+    }
+  </style>
+
   <title>Welcome to DevConnector</title>
 </head>
 
 <body>
   <noscript>You need to enable JavaScript to run this app.</noscript>
-  <div id="root"></div>
+  <div class="invisibleWhileLoading" id="root"></div>
 </body>
 
 </html>
