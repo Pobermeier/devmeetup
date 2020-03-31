@@ -16,8 +16,8 @@ router.post(
     [
       check('text', 'Text is required')
         .not()
-        .isEmpty()
-    ]
+        .isEmpty(),
+    ],
   ],
   async (req, res) => {
     const errors = validationResult(req);
@@ -32,8 +32,10 @@ router.post(
         text: req.body.text,
         name: user.name,
         avatar: user.avatar,
-        user: req.user.id
+        user: req.user.id,
       });
+
+      console.log(newPost);
 
       const post = await newPost.save();
 
@@ -42,7 +44,7 @@ router.post(
       console.error(err.message);
       res.status(500).send('Server Error');
     }
-  }
+  },
 );
 
 // @route    GET api/posts
@@ -171,8 +173,8 @@ router.post(
     [
       check('text', 'Text is required')
         .not()
-        .isEmpty()
-    ]
+        .isEmpty(),
+    ],
   ],
   async (req, res) => {
     const errors = validationResult(req);
@@ -188,7 +190,7 @@ router.post(
         text: req.body.text,
         name: user.name,
         avatar: user.avatar,
-        user: req.user.id
+        user: req.user.id,
       };
 
       post.comments.unshift(newComment);
@@ -200,7 +202,7 @@ router.post(
       console.error(err.message);
       res.status(500).send('Server Error');
     }
-  }
+  },
 );
 
 // @route    DELETE api/posts/comment/:id/:comment_id
@@ -212,7 +214,7 @@ router.delete('/comment/:id/:comment_id', auth, async (req, res) => {
 
     // Pull out comment
     const comment = post.comments.find(
-      comment => comment.id === req.params.comment_id
+      comment => comment.id === req.params.comment_id,
     );
     // Make sure comment exists
     if (!comment) {
@@ -224,7 +226,7 @@ router.delete('/comment/:id/:comment_id', auth, async (req, res) => {
     }
 
     post.comments = post.comments.filter(
-      ({ id }) => id !== req.params.comment_id
+      ({ id }) => id !== req.params.comment_id,
     );
 
     await post.save();
