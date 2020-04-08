@@ -1,0 +1,5 @@
+{
+  "mongoURI": "mongodb+srv://pober:pober1234@devconnector-j6vab.mongodb.net/test?retryWrites=true&w=majority",
+  "jwtSecret": "mysecrettoken",
+  "githubToken": "7d37f1bbe7fda9be79dcf89087bbe0efb6f79132"
+}
