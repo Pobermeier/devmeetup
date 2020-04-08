@@ -2,7 +2,7 @@
 A small social network for developers built with the MERN stack. Includes authentication using JWT web tokens. 
 Uses the Context API for client-side state management.
 
-You can check out the live project by clicking [here](https://mern-stack-app-social-network.herokuapp.com/dashboard).
+You can check out the live project by clicking [here](https://mern-stack-app-social-network.herokuapp.com/).
 
 # Quick Start
 ### Add a default.json file in config folder with the following
