@@ -10,10 +10,10 @@ const Landing = ({ isAuthenticated }) => {
     <section className="landing">
       <div className="dark-overlay">
         <div className="landing-inner">
-          <h1 className="x-large">Developer Connector</h1>
+          <h1 className="x-large">Stay connected with your peers!</h1>
           <p className="lead">
-            Create a developer profile/portfolio, share posts and get help from
-            other developers
+            Use the DevMeetup app to set up a profile, share posts &amp; get
+            help from fellow developers
           </p>
           <div className="buttons">
             <Link to="/register" className="btn btn-primary">
@@ -33,7 +33,7 @@ Landing.propTypes = {
   isAuthenticated: PropTypes.bool,
 };
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   isAuthenticated: state.auth.isAuthenticated,
 });
 
