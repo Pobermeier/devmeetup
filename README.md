@@ -1,4 +1,4 @@
-# DevMeetup - MERN-Stack social network
+# DevMeetup - MERN-Stack Social Network
 
 A small social network for developers built with the MERN stack. Includes authentication using JWT web tokens.
 Uses the Context API for client-side state management.
