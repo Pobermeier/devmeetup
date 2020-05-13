@@ -37,10 +37,14 @@ const Navbar = ({ logout, auth: { isAuthenticated, loading } }) => {
       </li>
 
       <li>
-        <Link to="/register">Register</Link>
+        <Link to="/register" className="btn btn-primary">
+          Register
+        </Link>
       </li>
       <li>
-        <Link to="/login">Login</Link>
+        <Link to="/login" className="btn btn-light">
+          Login
+        </Link>
       </li>
     </ul>
   );
@@ -48,8 +52,9 @@ const Navbar = ({ logout, auth: { isAuthenticated, loading } }) => {
   return (
     <nav className="navbar bg-dark">
       <h1>
-        <Link to="/">
-          <i className="fas fa-code"></i> DevConnector
+        <Link to="/" class="logo">
+          <i className="fas fa-meteor"></i> <strong>Dev</strong>
+          <span style={{ color: '#f5f5f5' }}>Meetup</span>
         </Link>
       </h1>
       {!loading && <>{isAuthenticated ? authLinks : guestLinks}</>}
@@ -62,7 +67,7 @@ Navbar.propTypes = {
   auth: PropTypes.object.isRequired,
 };
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   auth: state.auth,
 });
 
