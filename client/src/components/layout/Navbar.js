@@ -52,7 +52,7 @@ const Navbar = ({ logout, auth: { isAuthenticated, loading } }) => {
   return (
     <nav className="navbar bg-dark">
       <h1>
-        <Link to="/" class="logo">
+        <Link to="/" className="logo">
           <i className="fas fa-meteor"></i> <strong>Dev</strong>
           <span style={{ color: '#f5f5f5' }}>Meetup</span>
         </Link>
