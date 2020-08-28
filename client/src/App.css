@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import-normalize;
 
 /* Global Styles */
 :root {
@@ -280,6 +281,11 @@ button {
   color: var(--primary-color);
   padding: 0.25rem 0;
   display: inline-block;
+}
+
+.navbar h1 {
+  margin: 0;
+  font-size: 1.5rem;
 }
 
 .navbar .btn {
