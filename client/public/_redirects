@@ -1,2 +1,2 @@
-/api/* https://mern-stack-app-social-network.herokuapp.com/api/:splat 200
+/api/* https://devmeetup-production.up.railway.app/api/:splat 200
 /* /index.html 200
